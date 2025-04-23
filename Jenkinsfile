@@ -16,8 +16,11 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'python -m venv venv'
-                bat 'call venv\\Scripts\\activate && pip install -r requirements.txt'
+                bat '"C:\\Users\\Kanav Jethi\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m venv venv'
+                bat '''
+                    call venv\\Scripts\\activate
+                    pip install -r requirements.txt
+                '''
             }
         }
 
